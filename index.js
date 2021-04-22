@@ -38,7 +38,7 @@ function ipGeometric (value){
     $(".location").html(data.location.country);
     $(".location-city").html(data.location.region);
     $(".isp").html(data.isp);
-    $(".timezone").html(data.location.timezone);
+    $(".timezone").html("UTC"+data.location.timezone);
     // let lat = data.location.lat;
     // let lng = data.location.lng;
     let coordinates = [data.location.lat, data.location.lng];

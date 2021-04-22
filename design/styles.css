@@ -4,12 +4,22 @@ body{
   text-align: center;
 }
 
-.header-section{
+a{
+  text-decoration: none;
+  color:#fff;
+}
+
+.header{
   background-image: url("../images/pattern-bg.png");
+  height: 15rem;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header-section{
   text-align: center;
-  height: 15rem;
   padding-top: 1rem;
 }
 
@@ -19,8 +29,7 @@ body{
 }
 
 .header-section .container {
-  width: 500px;
-
+  width: 31.25rem;
 }
 
 .header-section .input-group {
@@ -45,10 +54,6 @@ body{
 .form-control::placeholder{
   opacity: 0.5;
 }
-.form-control::placeholder::before{
-  content:"hello";
-  color: red;
-}
 
 .details {
   display:flex;
@@ -60,10 +65,10 @@ body{
 
 .details .container {
   background-color: #fff;
-  height: 120px;
+  height: 7.5rem;
   border-radius: 20px;
   font-weight: 300;
-  width:961px;
+  width:60.063rem;
 }
 
 .details .row {
@@ -110,6 +115,52 @@ body{
 
 
 #mapid{
-  height:27rem;
+  height:60vh;
   position: relative;
+}
+
+.design{
+  font-weight: 700;
+  font-size: 13pt;
+}
+
+@media screen and (max-width:375px) {
+  .header{
+    height: 18.5rem;
+  }
+  .header-section .container {
+    width: 20.25rem;
+  }
+
+  .details .container {
+    height: 17.5rem !important ;
+    position: relative;
+    top: -1.75rem;
+    width: 19rem;
+  }
+
+  .row div.details-object:nth-child(n+2)::before{
+    display: none;
+    justify-content: center;
+    margin-top: 0;
+    content: " ";
+    border-left: none;
+    height: 0;
+    margin-right: 0;
+  }
+
+  .leaflet-control-zoom{
+    visibility: hidden;
+  }
+
+  .details-object{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .design{
+    margin: 5px 0 5px 0;
+    font-size: 11pt;
+  }
 }
