@@ -23,14 +23,7 @@ $(".btn").click(function(){
 function ipGeometric (value){
   const apiKey = "at_NMQw4gbQrcdcZxxqsTrvyLldUL3Fh";
   const ipOrDomain = value;
-  let searchBy;
-  if(value.toLowerCase().includes("www.")){
-    searchBy = "domain=";
-  }else{
-    searchBy = "ipAddress=";
-  }
-  console.log(searchBy);
-  let url = "https://geo.ipify.org/api/v1?apiKey="+apiKey+"&"+ searchBy +ipOrDomain;
+  let url = "https://geo.ipify.org/api/v1?apiKey="+apiKey+"&domain="+ipOrDomain;
   console.log(url);
   $.get(url,function(data,status){
     $(".form-control").attr("value" , data.ip );
