@@ -124,7 +124,7 @@ a{
   font-size: 13pt;
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:990px) {
   .header{
     height: 18.5rem;
   }
